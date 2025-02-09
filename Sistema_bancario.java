@@ -50,10 +50,25 @@ public class Main{
       op = input.nextInt();
       
       switch(op){
+        case 1:
+            System.out.print("Nome: ");
+            String nome = input.next();
+            System.out.print("Valor:");
+            float valor = input.nextInt();
+            System.out.print("Número da conta:");
+            int num_conta = input.nextInt();
+            ContaBancaria ContaBancaria = new ContaBancaria(nome, valor, num_conta);
+            break;
+            
         case 2:
           ContaBancaria1.usuario();
           break;
-          
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
         case 6:
           System.out.println("Saindo do sistema...");
           break;
@@ -65,7 +80,7 @@ public class Main{
     } while (op != 6);
     
     input.close();
-      
+    ContaBancaria1.usuario();
     
   }
 }
