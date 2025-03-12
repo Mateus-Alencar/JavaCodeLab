@@ -1,3 +1,7 @@
+//Uma das características importantes do Java é o polimorfismo, que se manifesta, entre outras formas, na sobrecarga de métodos. 
+//Isso significa que você pode criar métodos com o mesmo nome, mas com diferentes assinaturas — ou seja, com parâmetros diferentes, 
+//seja no número de parâmetros ou nos tipos dos parâmetros.
+
 class viagem {
     
     private String origem;
