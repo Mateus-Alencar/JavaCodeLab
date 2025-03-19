@@ -59,5 +59,12 @@ class ExemploVetores {
 
         // Tamanho do vetor
         System.out.println("\nTamanho do vetor: " + vetor.length);
+        
+        int [] vetor2 = new int[5];
+        vetor2[2] = 10;
+        System.out.println(vetor2);
+        for (int x = 0; x < vetor2.length; x++){
+            System.out.print(vetor2[x] + " - ");
+        }
     }
 }
