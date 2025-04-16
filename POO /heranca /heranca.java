@@ -35,7 +35,7 @@ class Fornecedor extends Pessoa {
     private double valorDivida;
 
     public Fornecedor(double valorCredito, double valorDivida, String nome, String endereco, String telefone) {
-        super(nome, endereco, telefone);
+        super(nome, endereco, telefone); // Chama o método construtor da super classe.
         this.valorCredito = valorCredito;
         this.valorDivida = valorDivida;
     }
