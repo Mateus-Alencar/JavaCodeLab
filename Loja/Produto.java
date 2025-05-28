@@ -3,6 +3,7 @@ public class Produto {
     private int idProduto;
     private String descricao;
     private double preco;
+   
     public Produto(int idProduto, String descricao, double preco){
         this.idProduto = idProduto;
         this.descricao = descricao;
@@ -31,6 +32,11 @@ public class Produto {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" + "idProduto=" + idProduto + ", descricao=" + descricao + ", preco=" + preco + '}';
     }
     
 }
