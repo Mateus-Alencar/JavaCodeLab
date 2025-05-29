@@ -66,11 +66,11 @@ public class Carrinho {
     }
     public boolean existeProduto(int id){
         for (ItemCarrinho ic: itens){
-            if (ic.getProduto().getIdProduto()==id){
+            if(ic.getProduto().getIdProduto()==id){
                 return true;
             }
-            return false;
         }
+        return false;
     }
     // Método para percorrer a ArrayList e mostrar o seu conteúdo
     public void mostrarCarrinho (){
@@ -99,11 +99,11 @@ public class Carrinho {
             if(itens.get(i).getProduto().getIdProduto()==id){
                 return i;
             }
-            return -1;
         }
+        return -1;
     }
     //Criar um metodo para alterar a quantidade de um produto no carrinho
-    public void alterarQuantProd(int idProduto, double quant, boolean tipo){
+    public void alterarQuantProd(int id, double quant, boolean tipo){
         // o tipo se for true, acrescenta a quantidade do item
         // se o tipo for false, decrementa a quantidade do item
         int pos;
@@ -115,7 +115,7 @@ public class Carrinho {
         if(tipo){
             //Adicionando
             itens.get(pos).setQuantidade(itens.get(pos).getQuantidade()+quant);
-            cliente.setDebito(cliente.setDebito()+itens.get(pos).getPreco()*quant);
+            cliente.setDebito(cliente.getDebito()+itens.get(pos).getPreco()*quant);
         }else{
             //Retirando
             if(quant>itens.get(pos).getQuantidade()){
@@ -123,10 +123,10 @@ public class Carrinho {
                 return;
             }
             itens.get(pos).setQuantidade(itens.get(pos).getQuantidade()- quant);
-            cliente.setDebito(cliente.setDebito()+itens.get(pos).getPreco()*quant);
+            cliente.setDebito(cliente.getDebito()-itens.get(pos).getPreco()*quant);
             if(itens.get(pos).getQuantidade()==0){
                 itens.remove(pos);
-                System.out.pritln("Item removido do carrinho");
+                System.out.println("Item removido do carrinho");
             }
         }
     }
