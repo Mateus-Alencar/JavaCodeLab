@@ -1,18 +1,18 @@
 public class ItemCarrinho {
-    private int produto;
+    private Produto produto;
     private double quantidade;
     private double preco;
-    public ItemCarrinho(int produto, double quantidade, double preco){
+    public ItemCarrinho(Produto produto, double quantidade, double preco){
         this.produto = produto;
         this.quantidade = quantidade;
         this.preco = preco;
     }
 
-    public int getProduto() {
+    public Produto getProduto() {
         return produto;
     }
 
-    public void setProduto(int produto) {
+    public void setProduto(Produto produto) {
         this.produto = produto;
     }
 
